@@ -10,7 +10,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferWindowMemory
 from dotenv import load_dotenv
 load_dotenv()
-#import chatbot_streamlit_combined
+
 
 def read_pdf(file):
     document = ""
@@ -43,11 +43,6 @@ def split_doc(document, chunk_size, chunk_overlap):
 
 def embedding_storing( split, create_new_vs, existing_vector_store, new_vs_name):
     if create_new_vs is not None:
-        # Load embeddings instructor
-        #instructor_embeddings = HuggingFaceInstructEmbeddings(
-           # model_name='hkunlp/instructor-xl', model_kwargs={"device":"cpu"}
-       # )
-        #model_name="GroNLP/gpt2-small-italian-embeddings" this is for italian language embedding
         instructor_embeddings =HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
                                            model_kwargs={'device': 'cpu'})
 
@@ -75,21 +70,12 @@ def embedding_storing( split, create_new_vs, existing_vector_store, new_vs_name)
 def prepare_rag_llm(
     token, vector_store_list, temperature, max_length
 ):
-    # Load embeddings instructor
-    #instructor_embeddings = HuggingFaceInstructEmbeddings(
-        #model_name='hkunlp/instructor-xl', model_kwargs={"device":"cpu"}
-    #)
-    #model_name="GroNLP/gpt2-small-italian-embeddings" this is for italian language embedding
     instructor_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
                                            model_kwargs={'device': 'cpu'})
     # Load db
     loaded_db = FAISS.load_local(
         f"vector store/{vector_store_list}", instructor_embeddings, allow_dangerous_deserialization=True
     )
-
-    # Load LLM
-    #repo_id='google/flan-t5-xxl'
-    #repo_id=andreabac3/Fauno-Italian-LLM-7B this is for italian language
     llm = HuggingFaceHub(
         repo_id = 'meta-llama/Meta-Llama-3-8B',
         model_kwargs={"temperature": temperature, "max_length": max_length},
