@@ -101,6 +101,27 @@ Error Analysis: Analyze the errors or shortcomings in the responses to identify 
 Model Tuning: Adjust the model parameters, retrain the model, or update the document embeddings and indexing process as needed.
 Re-evaluation: Re-run the evaluation pipeline to assess the improvements and ensure the model is performing optimally.
 
+## How the Dataset was Constructed
+The dataset for the RAG-based chatbot was constructed by collecting a diverse set of documents relevant to the expected queries. These documents included technical manuals, academic papers, and relevant web content. Each document was processed and converted into a suitable format (PDF or text) for embedding. Additionally, a set of representative queries was created to cover a broad spectrum of potential user questions, ensuring that the chatbot could be thoroughly evaluated across various topics.
+
+## Choice of Evaluation Metrics
+The evaluation metrics were chosen to comprehensively assess different aspects of the chatbot's performance:
+
+Accuracy: To measure the correctness of the responses in answering the user queries.
+Relevance: To ensure that the responses are pertinent to the questions asked.
+Fluency: To evaluate the naturalness and coherence of the language used in the responses.
+User Satisfaction: To gather subjective feedback from users on their experience with the chatbot.
+These metrics were selected to provide a balanced evaluation of both the technical performance and user experience, ensuring that the chatbot is not only accurate but also engaging and user-friendly.
+
+## Efforts to Improve Accuracy
+Several strategies were employed to improve the accuracy of the RAG-based chatbot:
+
+Data Augmentation: Increasing the diversity and quantity of documents in the knowledge base to provide a richer context for the chatbot.
+Model Fine-Tuning: Fine-tuning the underlying language model with additional domain-specific data to improve its understanding and generation capabilities.
+Optimization of Retrieval Mechanism: Enhancing the retrieval mechanism by experimenting with different embedding techniques and similarity measures to improve the relevance of retrieved document chunks.
+Iterative Testing and Feedback: Conducting iterative testing and incorporating user feedback to continually refine and improve the chatbot’s performance.
+These efforts were aimed at ensuring that the chatbot provides accurate, relevant, and contextually appropriate responses, enhancing its overall utility and effectiveness.
+
 ## Conclusion
 The evaluation pipeline for a RAG-based chatbot is crucial to ensure that the model provides accurate, relevant, and contextually appropriate responses. By leveraging both internal and external knowledge sources, the RAG model can significantly enhance the capabilities of traditional chatbots, making them more effective in a wide range of applications.
 
