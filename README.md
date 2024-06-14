@@ -75,8 +75,8 @@ For a consistent development environment, you can use the provided devcontainer 
     - Open the project in Visual Studio Code.
     - Press `F1` and select `Remote-Containers: Reopen in Container`.
   
-## Evaluation Pipeline for RAG
-#Overview
+# Evaluation Pipeline for RAG
+## Overview
 The evaluation pipeline for the Retrieval-Augmented Generation (RAG) model assesses its performance in providing accurate and contextually relevant responses based on both internal knowledge (from the trained model) and external knowledge (from provided documents). This process involves several steps:
 
 1. Step 1: Data Preparation
@@ -101,6 +101,6 @@ Error Analysis: Analyze the errors or shortcomings in the responses to identify 
 Model Tuning: Adjust the model parameters, retrain the model, or update the document embeddings and indexing process as needed.
 Re-evaluation: Re-run the evaluation pipeline to assess the improvements and ensure the model is performing optimally.
 
-#Conclusion
+## Conclusion
 The evaluation pipeline for a RAG-based chatbot is crucial to ensure that the model provides accurate, relevant, and contextually appropriate responses. By leveraging both internal and external knowledge sources, the RAG model can significantly enhance the capabilities of traditional chatbots, making them more effective in a wide range of applications.
 
