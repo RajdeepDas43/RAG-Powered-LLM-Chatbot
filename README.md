@@ -79,6 +79,8 @@ For a consistent development environment, you can use the provided devcontainer 
 ## Overview
 The evaluation pipeline for the Retrieval-Augmented Generation (RAG) model assesses its performance in providing accurate and contextually relevant responses based on both internal knowledge (from the trained model) and external knowledge (from provided documents). This process involves several steps:
 
+![1_AjzZmZaW00iBfy-mij4Asw](https://github.com/RajdeepDas43/RAG-Powered-LLM-Chatbot/assets/120500013/a4b7df3e-86ed-47cd-a7ce-94a9c4d36f58)
+
 1. Step 1: Data Preparation
 Document Collection: Gather a set of documents that will serve as the external knowledge base. These can be in various formats such as PDF, text files, etc.
 Query Collection: Prepare a set of queries or questions that the chatbot will respond to. These should be relevant to the content in the documents.
@@ -107,10 +109,10 @@ The dataset for the RAG-based chatbot was constructed by collecting a diverse se
 ## Choice of Evaluation Metrics
 The evaluation metrics were chosen to comprehensively assess different aspects of the chatbot's performance:
 
-Accuracy: To measure the correctness of the responses in answering the user queries.
-Relevance: To ensure that the responses are pertinent to the questions asked.
-Fluency: To evaluate the naturalness and coherence of the language used in the responses.
-User Satisfaction: To gather subjective feedback from users on their experience with the chatbot.
+- Accuracy: To measure the correctness of the responses in answering the user queries.
+- Relevance: To ensure that the responses are pertinent to the questions asked.
+- Fluency: To evaluate the naturalness and coherence of the language used in the responses.
+- User Satisfaction: To gathersubjective feedback from users on their experience with the chatbot.
 These metrics were selected to provide a balanced evaluation of both the technical performance and user experience, ensuring that the chatbot is not only accurate but also engaging and user-friendly.
 
 ## Efforts to Improve Accuracy
