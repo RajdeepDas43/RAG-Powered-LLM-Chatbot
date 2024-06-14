@@ -7,11 +7,7 @@ import gc
 from pynvml import nvmlInit, nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo
 from dotenv import load_dotenv
 load_dotenv()
-#token = os.getenv('API_KEY')
-#progress_bar
-#main_placeholder = st.empty()
-#def main_place(message="The Task Is Finished !!!!"):
-  # main_placeholder.text(message)
+
 token=os.getenv("API_KEY")
 # Memory management functions
 def clear_gpu_memory():
