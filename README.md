@@ -74,4 +74,33 @@ For a consistent development environment, you can use the provided devcontainer 
 
     - Open the project in Visual Studio Code.
     - Press `F1` and select `Remote-Containers: Reopen in Container`.
+  
+## Evaluation Pipeline for RAG
+#Overview
+The evaluation pipeline for the Retrieval-Augmented Generation (RAG) model assesses its performance in providing accurate and contextually relevant responses based on both internal knowledge (from the trained model) and external knowledge (from provided documents). This process involves several steps:
+
+1. Step 1: Data Preparation
+Document Collection: Gather a set of documents that will serve as the external knowledge base. These can be in various formats such as PDF, text files, etc.
+Query Collection: Prepare a set of queries or questions that the chatbot will respond to. These should be relevant to the content in the documents.
+2. Step 2: Embedding and Indexing
+Document Embedding: Convert the documents into vector embeddings using a pre-trained model. This allows the system to perform similarity searches.
+Indexing: Store the document embeddings in a vector database, such as FAISS, to enable efficient retrieval.
+3. Step 3: Retrieval
+Query Embedding: Convert the user queries into vector embeddings.
+Similarity Search: Perform a similarity search in the vector database to retrieve the most relevant document chunks based on the query embeddings.
+4. Step 4: Generation
+Prompt Creation: Combine the retrieved document chunks with the user query to create a prompt.
+Response Generation: Use the LLM to generate a response based on the combined prompt. The LLM leverages both its internal knowledge and the retrieved document chunks to provide a more accurate and contextually relevant answer.
+5. Step 5: Evaluation Metrics
+Accuracy: Measure how accurately the responses answer the user queries.
+Relevance: Assess the relevance of the responses to the user queries.
+Fluency: Evaluate the fluency and coherence of the generated responses.
+User Satisfaction: Gather feedback from users to assess their satisfaction with the chatbot’s responses.
+6. Step 6: Iterative Improvement
+Error Analysis: Analyze the errors or shortcomings in the responses to identify areas for improvement.
+Model Tuning: Adjust the model parameters, retrain the model, or update the document embeddings and indexing process as needed.
+Re-evaluation: Re-run the evaluation pipeline to assess the improvements and ensure the model is performing optimally.
+
+#Conclusion
+The evaluation pipeline for a RAG-based chatbot is crucial to ensure that the model provides accurate, relevant, and contextually appropriate responses. By leveraging both internal and external knowledge sources, the RAG model can significantly enhance the capabilities of traditional chatbots, making them more effective in a wide range of applications.
 
