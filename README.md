@@ -24,14 +24,6 @@ In this project, a multi-source chatbot using RAG has been implemented. Users ca
 
 ![Navigation Bar](https://github.com/semanto-mondal/RAG-Based-Multi-Source-Chatbot-Using-LLM/assets/133217806/20301ec9-9498-4de0-be3a-b7eb3e493c23)
 
-## Document Embedding Interface
-
-![Document Embedding Interface](https://github.com/semanto-mondal/RAG-Based-Multi-Source-Chatbot-Using-LLM/assets/133217806/dc58999e-7740-44eb-8c97-b4929725ff49)
-
-## Chatbot Interface
-
-![Chatbot Interface](https://github.com/semanto-mondal/RAG-Based-Multi-Source-Chatbot-Using-LLM/assets/133217806/8c04d3ff-3fde-466b-ba06-b3ac58290d85)
-
 ## How to Run the Code
 
 ### Prerequisites
